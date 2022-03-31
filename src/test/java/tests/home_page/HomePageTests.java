@@ -27,4 +27,8 @@ public class HomePageTests extends TestBase {
 //        }
     }
 
+    @Test
+    public void print2(){
+        System.out.println("222222test test");
+    }
 }
