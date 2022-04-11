@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -7,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-    WebDriver driver;
+   public WebDriver driver;
 
     @BeforeMethod
 
@@ -24,4 +25,9 @@ public class TestBase {
        // driver.close();
        // driver.quit();
     }
+
+    public void click(By locator){
+       driver.findElement(locator).click();
+    }
+
 }
