@@ -21,7 +21,7 @@ public class HomePage extends PageBase{
     WebElement langSelector;
     @FindBy(css = "button.btn.btn-default[type='submit']")
     WebElement goButton;
-    @FindBy(css= "[type='submit']:nth-child(2)")
+    @FindBy(css= "[type='submit'  ]:nth-child(2)")
     WebElement buttonForCheckLang;
 
     public boolean homeLinkIsVisible() {
@@ -48,8 +48,8 @@ public class HomePage extends PageBase{
     public boolean isTranslated(){
          return driver.findElement(By.cssSelector("[value='Найти']")).isDisplayed();
     }
-public String getTextFromButton(){
-        return buttonForCheckLang.getText();
+    public String getTextFromGoButton(){
+        return goButton.getText();
 
 }
 
